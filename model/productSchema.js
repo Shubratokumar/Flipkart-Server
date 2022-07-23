@@ -2,7 +2,11 @@ import mongoose  from 'mongoose';
 
 // Creating product schema
 const productSchema = new mongoose.Schema({
-    id: String,
+    id: {
+        type: String,
+        required: true,
+        unique: true,
+    },
     url: String,
     title:{
         shortTitle: String,
